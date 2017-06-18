@@ -1,4 +1,5 @@
 # README
+Stepan Dubovoy 2017 ___Basic Commercial Web-App___
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
