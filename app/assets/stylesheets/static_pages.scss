@@ -1,3 +1,30 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+h1 {
+	font-family: Futura, Helvetica, Arial, sans-serif;
+	text-align: center;
+	padding-top: 0.85em;
+	margin-top: 1em;
+	margin-bottom: 30px;
+	color: #202060;
+	font-size: 2em;
+}
+
+h2 {
+	font-family: Marck Script, Futura, Helvetica, Arial, sans-serif;
+	text-align: center;
+	padding-top: 0.2em;
+	margin-top: 0.2em;
+	margin-bottom: 20px;
+	color: black;
+	font-size: 2.5em;
+	font-weight: 900;
+}
+
+.bicycle{
+	display: block;
+	margin: auto;
+}
