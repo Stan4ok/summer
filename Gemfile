@@ -9,6 +9,8 @@ ruby '2.4.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'
 # 'sqlite3' removed from here!
+#jquery gem
+gem 'jquery-rails'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
