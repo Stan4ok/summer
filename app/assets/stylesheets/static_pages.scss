@@ -2,17 +2,65 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/* ---For Sticky Footer---*/
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -60px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  height: 60px; 
+}
+.site-footer {
+  background: white;
+  font-family: Futura, Helvetica, Arial, sans-serif;
+	text-align: center;
+  font-size: 1.5em;
+	font-weight: 900;
 
+}
+/*---END For Sticky Footer---*/
+
+.navbar-header a{
+	font-family: Futura, Helvetica, Arial, sans-serif;
+	color: #004d00;
+	font-size: 1.5em;
+	font-weight: 900;
+	text-decoration: none;
+}
+.navbar-right>ul>li>a{
+	font-family: Futura, Helvetica, Arial, sans-serif;
+	color: #004d00;
+	font-size: 1.5em;
+	font-weight: 900;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #004d00;
+    font-family: Futura, Helvetica, Arial, sans-serif;
+		color: #004d00;
+		font-size: 1.5em;
+		font-weight: 900;
+}
 h1 {
 	font-family: Futura, Helvetica, Arial, sans-serif;
 	text-align: center;
 	padding-top: 0.85em;
 	margin-top: 1em;
-	margin-bottom: 30px;
-	color: #202060;
+	margin-bottom: 20px;
+	color: #990000;
 	font-size: 2em;
+	font-weight: 900;
 }
-
 h2 {
 	font-family: Marck Script, Futura, Helvetica, Arial, sans-serif;
 	text-align: center;
@@ -23,8 +71,31 @@ h2 {
 	font-size: 2.5em;
 	font-weight: 900;
 }
-
+h3{
+	font-family: Futura, Helvetica, Arial, sans-serif;
+	font-size: 1.8em;
+	font-weight: 700;
+}
+p{
+	font-family: Futura, Helvetica, Arial, sans-serif;
+	font-size: 1.5em;
+	font-weight: 500;
+	margin-left: 30px;
+}
 .bicycle{
 	display: block;
+	margin: auto;
+	width: 60%; 
+	height: 60%;
+}
+.construction{
+	padding: 2em;
+	display: block;
+	margin: auto;
+	width: 35%; 
+	height: 35%;
+}
+#map{
+	padding: 1em;
 	margin: auto;
 }
