@@ -1,0 +1,11 @@
+<h1>Special Offer!</h1>
+<h2><%= @featured_product.name %></h2>
+<% num_featured = @featured_product.id %>
+<%= link_to image_tag(@featured_product.image_url, class: "img-responsive items"), "products/#{num_featured}" %>
+<div id="box">
+    <h2><font color="red">Only Today:</font></h2>
+    <h2> At a price of €<%= @featured_product.price %></h2>
+</div>
+
+
+
