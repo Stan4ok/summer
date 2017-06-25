@@ -2,6 +2,7 @@
 
 <h1>Products</h1>
 
+<!--
 <table>
   <thead>
     <tr>
@@ -13,24 +14,37 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
+-->
   <tbody>
     <% @products.each do |product| %>
-      <tr>
-        <td><%= product.name %></td>
+      <!--<tr>
+        <td><#%= product.name %></td>
         <td><%= product.description %></td>
         <td><%= product.image_url %></td>
         <td><%=product.colour %></td>
         <td><%=product.price %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <!--
+        <td><#%= link_to 'Show', product %></td>
+        <td><#%= link_to 'Edit', edit_product_path(product) %></td>
+        <td><#%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
       </tr>
+    -->
+      <div class="showcase">
+        <div class="col-sm-2 col-md-4">
+          <% num = product.id %>
+          <%= link_to image_tag(product.image_url, class: "img-responsive items"), "products/#{num}" %>
+          <a href='products/<%= product.id %>'> <h2><%= product.name %></h2></a>
+          <p><%= product.description %></p>
+          <hr>
+          <strong> €<%= product.price %></strong>
+        </div><!-- /col -->
+      </div><!-- /showcase -->
     <% end %>
   </tbody>
-</table>
+<!--</table> -->
 
 <br>
-
-<%= link_to 'New Product', new_product_path %>
-
+<!--
+<#%= link_to 'New Product', new_product_path %>
+-->
