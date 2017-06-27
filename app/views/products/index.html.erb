@@ -33,12 +33,15 @@
     -->
       <div class="showcase">
         <div class="col-sm-2 col-md-4">
-          <% num = product.id %>
-          <%= link_to image_tag(product.image_url, class: "img-responsive items"), "products/#{num}" %>
-          <a href='products/<%= product.id %>'> <h2><%= product.name %></h2></a>
-          <p><%= product.description %></p>
-          <hr>
-          <strong> €<%= product.price %></strong>
+          <div class="item">
+            <% num = product.id %>
+            <%= link_to image_tag(product.image_url, class: "img-responsive item_pic"), "products/#{num}" %>
+            <a href='products/<%= product.id %>'> <h2><%= product.name %></h2></a>
+            <p><%= product.description %></p>
+            <hr class="style-two">
+            <strong> &nbsp;&nbsp;€<%= product.price %></strong>
+            <a href="../orders"><button type="button" class="btn btn-success buy">Buy</button></a>
+          </div><!-- /div item -->
         </div><!-- /col -->
       </div><!-- /showcase -->
     <% end %>

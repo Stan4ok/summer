@@ -33,34 +33,59 @@ html, body {
 }
 /*---END For Sticky Footer---*/
 
+/*---Navbar Design---*/
+.navbar{
+	width: 100%;
+}
+
+
 .navbar-header a{
 	font-family: Futura, Helvetica, Arial, sans-serif;
-	color: #004d00;
+	color: #009999;
 	font-size: 1.5em;
 	font-weight: 900;
 	text-decoration: none;
+	margin-left: 1em;
 }
-.navbar-right>ul>li>a{
+.navbar-header a:hover{
+	color: #990000;
+	background-color: transparent;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+	border: 0.5px solid #99d6d6; 
+	border-radius: 15px;
+	background-color: #fffff0;
+}
+
+/*.navbar-right>ul>li>a{
 	font-family: Futura, Helvetica, Arial, sans-serif;
 	color: #004d00;
 	font-size: 1.5em;
 	font-weight: 900;
 }
+*/
 .navbar-default .navbar-nav>li>a {
-    color: #004d00;
-    font-family: Futura, Helvetica, Arial, sans-serif;
-		color: #004d00;
-		font-size: 1.5em;
-		font-weight: 900;
+  margin-right: 1em;
+  color: #004d00;
+  font-family: Futura, Helvetica, Arial, sans-serif;
+	color: #009999;
+	font-size: 1.5em;
+	font-weight: 900;
 }
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
+	color: #990000;
+}
+/*---END Navbar Design---*/
+
 h1 {
 	font-family: Futura, Helvetica, Arial, sans-serif;
 	text-align: center;
-	padding-top: 0.85em;
+	padding-top: 1em;
 	margin-top: 1em;
 	margin-bottom: 20px;
 	color: #990000;
-	font-size: 3em;
+	font-size: 2em;
 	font-weight: 900;
 }
 h2 {
@@ -102,7 +127,13 @@ p{
 }
 /*---End Styling Images---*/
 
-/*---Bulding Price on the Landing_Page---*/
+.special_offer{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+}
+/*---Bulging Price on the Landing_Page---*/
 #map{
 	padding: 1em;
 	margin: auto;
@@ -118,4 +149,4 @@ p{
 #box {
      -webkit-animation: fontbulger 2s infinite;
 }
-/*---END_Bulding Price on the Landing_Page---*/
+/*---END_Bulging Price on the Landing_Page---*/
