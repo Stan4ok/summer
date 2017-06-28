@@ -166,7 +166,7 @@ p{
 .carousel{
 	margin: 5em auto;
 }
-.carousel-inner>.item>img{
+.carousel-inner>.item>a>img{
 	height: 70%;
 	width: 70%;
 	margin-right: auto;
@@ -191,5 +191,12 @@ a:hover{
 	font-size: 2.5em;
 	font-weight: 900;
 */
+ol.carousel-indicators li{
+	border-color: #009999;
+	background: transparent;
+}
+ol.carousel-indicators li.active {
+  background: #009999;
+}
 
 /*---END Index Page---*/

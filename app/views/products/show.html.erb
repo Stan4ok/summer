@@ -1,29 +1,32 @@
 <p id="notice"><%= notice %></p>
+<div class="show">
+	<p>
+  	<h1><%= @product.name %></h1>
+	</p>
 
-<p>
-  <h1>Name: <%= @product.name %></h1>
-  
-</p>
+	<% num = @product.id %>
+	<%= link_to image_tag(@product.image_url, class: "img-responsive item_pic_2"), "../products/#{num}" %>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+	<p class="full_description">
+  	<strong>Description:</strong>
+  	<%= @product.description %>
+	</p>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
+<!--	<p>
+  	<strong>Image url:</strong>
+  	<#%= @product.image_url %>
+	</p>-->
+	<p>
+  	<strong>Colour:</strong>
+  	<%= @product.colour %>
+	</p>
 
-<p>
-  <strong>Colour:</strong>
-  <%= @product.colour %>
-</p>
+	<hr class="style-two">
+	<strong> &nbsp;&nbsp;€<%= @product.price %></strong>
+ 	<a href="../orders"><button type="button" class="btn btn-success buy">Buy</button></a>
 
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+	<div class="auxiliary_link">
+		<%= link_to 'Edit', edit_product_path(@product) %> |
+		<%= link_to 'Back', products_path %>
+	</div>
+</div><!--/show-->
