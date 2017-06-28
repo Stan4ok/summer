@@ -3,10 +3,10 @@
 	<p>
   	<h1><%= @product.name %></h1>
 	</p>
-
+</div> <!--closing .show here so the pic below doesn't get squeezed in the mobile mode-->
 	<% num = @product.id %>
 	<%= link_to image_tag(@product.image_url, class: "img-responsive item_pic_2"), "../products/#{num}" %>
-
+<div class="show"><!--Show class continues here so the content except for the pic forms a nice column-->
 	<p class="full_description">
   	<strong>Description:</strong>
   	<%= @product.description %>
