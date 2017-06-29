@@ -36,15 +36,19 @@
                 <span class="icon-bar"></span>
               </button>          
               <div class="projectName navbar-brand">
-                <a href="../static_pages/index">Bike Berlin</a>
+                <!--<a href="../static_pages/index">Bike Berlin</a>-->
+                <%= link_to "Bike Berlin", root_path %>
               </div> <!--end projectName -->       
             </div> <!--end navbar-header -->       
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar-right">
-                <li><a href="../static_pages/about">About</a></li>
-                <li><a href="../products">Products</a></li>
-                <li><a href="../orders">Basket</a></li>
-                <li><a href="../static_pages/contact">Contact</a></li>
+                <!--<li><a href="../static_pages/about">About</a></li>-->
+                <li> <%= link_to "About", static_pages_about_path %></li>
+                <li> <%= link_to "Products", products_path %></li>
+                <li> <%= link_to "Basket", orders_path %></li>
+                <li> <%= link_to "Contact", static_pages_contact_path %></li>
+                
+
               </ul>
             </div>
           </div><!--end row to fix padding issue-->  
@@ -55,7 +59,7 @@
 
     </div>
     <footer class="site-footer">
-      2017 Stepan Dubovoy. All rights reserved.
+      2017 <%= link_to "Stepan Dubovoy.", "http://aduestep.bitballoon.com" %> All rights reserved.
     </footer>
 
   </body>
