@@ -37,8 +37,6 @@ html, body {
 .navbar{
 	width: 100%;
 }
-
-
 .navbar-header a{
 	font-family: Futura, Helvetica, Arial, sans-serif;
 	color: #009999;
@@ -72,10 +70,30 @@ html, body {
 	color: #009999;
 	font-size: 1.5em;
 	font-weight: 900;
+	padding: 0.7em;
 }
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
 	color: #990000;
 }
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  margin-top: 0em;
+}
+
+.form-control{
+	display: inline-block;
+	width: 50%;
+	padding: 1em 2em 1em;
+	margin-top: 0.5em;
+	border-color: #ccc;
+} 
+
+
 /*---END Navbar Design---*/
 
 h1 {

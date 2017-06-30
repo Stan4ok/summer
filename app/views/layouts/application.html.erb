@@ -47,8 +47,20 @@
                 <li> <%= link_to "Products", products_path %></li>
                 <li> <%= link_to "Basket", orders_path %></li>
                 <li> <%= link_to "Contact", static_pages_contact_path %></li>
-                
+                <!-- Search Box -->
+                <li>  <%= form_with(url: products_url, method: 'get') do |form| %>
+                        <%= form.label :q, 'Search for:', class:"hidden" %>
+                        <%= form.text_field :q, id: 'q', value: params[:q], class:"form-control", placeholder:"Search" %>
+                        <%= form.submit 'Search', class:"btn btn-default" %>
+                      <% end %>
 
+                      <%= form_tag("/products", method: "get") do %> 
+                        <%= label_tag(:q, "Search for:", class:"hidden") %>
+                        <%= text_field_tag(:q, "", type:"text", class:"form-control", placeholder:"Search") %>
+                        <%= submit_tag("Search", class:"btn btn-default") %>
+                      <% end %>
+                </li>
+                <!-- / Search Box -->
               </ul>
             </div>
           </div><!--end row to fix padding issue-->  
