@@ -6,8 +6,52 @@
 
 	<h3>Hours</h3>
 		<p>Mon-Sat: 10AM-7PM</p>
+
+  <iframe width="400" height="350" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Kopenicker%20Str.%20126%2010179%20Berlin%2C%20Germany&key=AIzaSyCEK92_s9jxvJ7Nbiwr-AV42EE-PMGW_-c" allowfullscreen id="map"></iframe>
 </div>
 
 <div class="col-md-8 col-xs-10">
-	<iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Kopenicker%20Str.%20126%2010179%20Berlin%2C%20Germany&key=AIzaSyCEK92_s9jxvJ7Nbiwr-AV42EE-PMGW_-c" allowfullscreen id="map"></iframe>
+	<h1>Contact Us</h1>
+<!--- Form_with does not work
+<#%= flash[:notice] %>
+
+<#%= form_with(url: "/static_pages/thank_you") do |form| %>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <#%= form.label :name %>
+        <#%= form.text_field :name, class: "form-control", placeholder: "Enter Name" %>
+      </div>        
+      <div class="form-group">
+        <#%= form.label :email, "Email Address" %>
+        <#%= form.text_field :email, class: "form-control", placeholder: "Enter Email" %>
+      </div>
+      <div class="form-group">
+        <#%= form.label :message %>
+        <#%= form.text_area :message, class: "form-control", placeholder: "Enter Message" %>
+      </div>        
+    </div>
+  </div>
+  <#%= form.submit "Send" %>   
+<#% end %>
+-->
+  <%= form_tag("/static_pages/thank_you") do %>
+  
+    <div class="form-group" id="contactform">
+      <div class="row">
+        <h4><%= label_tag :name, nil %></h4>
+        <%= text_field_tag :name, nil, class:"form-control", placeholder:"Your name..", type:"text", required: "True" %>
+        <h4><%= label_tag :phone, nil %></h4>
+        <%= text_field_tag :phone, nil, class:"form-control", placeholder:"Your telephone..", type:"text", required: "True" %>
+        <h4><%= label_tag :email, nil %></h4>
+        <%= text_field_tag :email, nil, class:"form-control", placeholder:"Your email..", type:"text", required: "True" %>
+        <h4><%= label_tag :message, nil %></h4>
+        <%= text_area_tag :message, nil, class:"form-control", placeholder:"Your message..", id:"message-box", type:"text", rows:"5", required: "True" %> 
+      </div>
+      <div class="row">
+        <%= submit_tag "Submit", class:"btn btn-default", id:"subbut", type:"submit" %>
+      </div>  
+    </div>
+  
+  <% end %>
 </div>
