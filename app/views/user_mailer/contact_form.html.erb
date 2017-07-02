@@ -52,7 +52,7 @@
         <table border="0" cellpadding="0" cellspacing="0" class="table_width_100" style="max-width: 680px; min-width: 300px;" width="100%">
           <tr>
             <td align="center">
-              <%= image_tag("bicycle_medium.jpg", class:"img-responsive", width:"360", alt:"Berlin Bike Shop", border:"0") %>
+              <%= image_tag("https://commons.wikimedia.org/wiki/Bicycle#/media/File:Zeichen_237.svg", class:"img-responsive", width:"360", alt:"Berlin Bike Shop", border:"0") %>
             </td>
           </tr>
         </table>
@@ -70,7 +70,7 @@
               <!-- padding -->
               <div style="height: 60px; line-height: 60px; font-size: 10px;"></div>
               <div style="line-height: 44px;">
-                <font color="#57697E" face="" size="5" style="font-size: 34px;">
+                <font color="#990000" face="" size="5" style="font-size: 34px;">
                   <span style="font-family:"> Thank you for your enquiry! </span></font>
               </div>
               <!-- padding -->
@@ -80,7 +80,7 @@
           <tr>
             <td align="center">
               <div style="line-height: 24px;">
-                <font color="#57697E" face="" size="4" style="font-size: 15px;"><span style="font-family:">Dear <%= @name %>, we will contact you on <br> <%= @phone %> <br> Your Berlin Bike shop.</span></font>
+                <font color="#990000" face="" size="4" style="font-size: 15px;"><span style="font-family:">Dear <%= @name %>, we will contact you on <br> <%= @phone %> <br> Your Berlin Bike shop.</span></font>
               </div>
               <!-- padding -->
               <div style="height: 40px; line-height: 40px; font-size: 10px;"></div>
@@ -89,7 +89,8 @@
           <tr>
             <td align="center">
               <div style="line-height: 24px;">
-                <font color="#57697E" face="" size="4" style="font-size: 15px;"><span style="font-family:"><%= @message %></span></font>
+                <font color="#990000" face="" size="4" style="font-size: 15px;"><span style="font-family:"><%= @message %></span></font>
+                  <span style="font-family:"><%= @phone %></span>
               </div><!-- padding -->
               <div style="height: 40px; line-height: 40px; font-size: 10px;"></div>
             </td>

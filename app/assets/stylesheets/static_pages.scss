@@ -87,7 +87,7 @@ html, body {
 
 .form-control{
 	display: inline-block;
-	width: 50%;
+	width: 60%;
 	padding: 1em 2em 1em;
 	margin-top: 0.5em;
 	border-color: #ccc;
@@ -220,5 +220,10 @@ ol.carousel-indicators li{
 ol.carousel-indicators li.active {
   background: #009999;
 }
-
 /*---END Index Page---*/
+
+/*---Contact Form---*/
+.form-group{
+  margin-left: 15em;
+}
+/*---END Contact Form---*/
