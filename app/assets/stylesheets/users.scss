@@ -2,12 +2,29 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/*#logbox {
-  padding: 10px;
-  margin: 50px auto;
-  width: 340px;
-  background-color: #fff;
-  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);}
-  */
+/*Signup, Login Forms*/
+#signup, #login, #users_form, #user_profile{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 1320px;
+  top: 80px;
+  padding-bottom: 70px;
+}
+#signup .form-control{
+  width: 100%;
+}
+#login .form-control{
+  width: 100%;
+}
+#users_form .form-control{
+  width: 100%;
+}
+#user_profile{
+  margin-top: 6em;
+  font-family: Futura, Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+}
