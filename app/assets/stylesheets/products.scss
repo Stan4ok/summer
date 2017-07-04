@@ -16,7 +16,8 @@
 	background-color: #fffff0; 
 	padding: 1.5em;
 	margin: 1em;
-	height: 35em;
+	height: 36em;
+  overflow: hidden;
 }
 .item_pic{
 	height: 17.5em;
@@ -25,25 +26,65 @@
 	margin-left: auto;
 	margin-right: auto;
 	padding: 0.5em;
+  position: relative;
+}
+.card_block{
+    display: block;
+    position: relative;
+    bottom:0;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 35%;
+    z-index: 1;
+    
+    width: 100%;
+}
+.card_block>a>h2{
+  line-height: 0.5;
 }
 p{
-	text-align: center;
+	text-align: left;
 	font-size: 7.0vmin;
 	font-weight: 900;
 	font-family: Futura, Helvetica, Arial, sans-serif;
 }
+#descr{
+  margin-left: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  max-height: 48.5%;
+  line-height: 1.2em;
+}
+.card_footer{
+  padding-right: 18%;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 0;
+  z-index: 2;
+  margin-bottom: 0em;
+}
 
 /* ---For Horizontal Line---*/
 .style-two {
+    z-index: 3;
     border: 0;
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    margin-top: 0;
+    margin-bottom: 1em;
 }
 /* ---END For Horizontal Line---*/
 
 /*--For Buttons--*/
 .buy{
-	float: right;
+  position:relative;
+	
+  margin: 0em 2em;
+  
 	
 }
 /*--END For Buttons--*/

@@ -4,13 +4,18 @@
           <div class="product_item">
             <% num = product.id %>
             <%= link_to image_tag(product.image_url, class: "img-responsive item_pic"), "products/#{num}" %>
-            <a href='products/<%= product.id %>'> <h2><%= product.name %></h2></a>
-            <% descr = product.description %>
-            <% shortDescr = descr[0..47] %>
-            <p><%= shortDescr %>...</p>
+            <div class="card_block">
+              <a href='products/<%= product.id %>'> <h2><%= product.name %></h2></a>
+              <% descr = product.description %>
+              <% shortDescr = descr[0..90] %>
+              <p id="descr"><%= shortDescr %>. . .</p>
+            </div><!--card_block-->  
             <hr class="style-two">
-            <strong> &nbsp;&nbsp;€<%= product.price %></strong>
-            <a href="../orders"><button type="button" class="btn btn-success buy">Buy</button></a>
+            <div class="card_footer">  
+              <strong> &nbsp;&nbsp;€<%= product.price %></strong>
+              <a href="../orders"><button type="button" class="btn btn-success buy">Buy</button></a>
+            </div>
+             
           </div><!-- /div item -->
         </div><!-- /col -->
       </div><!-- /showcase -->

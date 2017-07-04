@@ -23,7 +23,8 @@ class StaticPagesController < ApplicationController
    @email = params[:email]
    @phone = params[:phone] 
    @message = params[:message] 
-   UserMailer.contact_form(@email, @name, @phone, @message).deliver_now
+   UserMailer.contact_form(@email, @name, @message, @phone).deliver_now
+
  end
 
 end

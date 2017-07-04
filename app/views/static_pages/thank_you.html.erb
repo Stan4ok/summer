@@ -1,8 +1,24 @@
+<!--
 <div class="panel panel-default">
   <br> <br> <br> <br>
   <div class="panel-body">
+          <#% if notice %>
+        <p id="notice" class="alert alert-info notice" role="alert"><%= notice %></p>
+      <#% end %>
     <p>Thank you. We have received your message and will respond as soon as possible.</p>
     <br> <br>
-    <h1> <%= link_to "Back to Products", products_path %></h1>
-  </div><!-- / panel-body -->
-</div><!-- / panel -->
+    <h1> <#%= link_to "Back to Products", products_path %></h1>
+  </div><!- / panel-body ->
+</div><!- / panel ->
+-->
+
+  <br> <br> <br> <br>
+  
+          
+  <h2 class="alert">Thank you. We have received your message!</h2>
+    
+    
+  <br> <br>
+  <h4> <%= link_to "Redirection to Products", products_path %></h4>
+  
+  <meta http-equiv="refresh" content="4; ../products" />
