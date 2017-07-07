@@ -53,7 +53,7 @@
                 <li> <%= link_to "Users", users_path %></li>
                 <li> <%= link_to "Contact", static_pages_contact_path %></li>
                 <!-- Search Box -->
-                <li>  <%= form_with(url: products_url, method: 'get', local: true) do |form| %>
+                <li id="search_form">  <%= form_with(url: products_url, method: 'get', local: true) do |form| %>
                         <%= form.label :q, 'Search for:', class:"hidden" %>
                         <%= form.text_field :q, id: 'q', value: params[:q], class:"form-control", placeholder:"Search" %>
                         <%= form.submit 'Search', class:"btn btn-default" %>
@@ -61,7 +61,7 @@
                 </li>
                 <!-- Authentication -->
                 <ul class="nav pull-right navbar-nav">
-                <li>
+                <li id="log_button">
                 <% if user_signed_in? %>
                   <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
                 <% else %>

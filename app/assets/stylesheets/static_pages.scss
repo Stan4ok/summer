@@ -34,6 +34,7 @@ html, body {
 /*---END For Sticky Footer---*/
 
 /*---Navbar Design---*/
+
 .navbar{
 	width: 100%;
 }
@@ -64,13 +65,15 @@ html, body {
 }
 */
 .navbar-default .navbar-nav>li>a {
-  margin-right: 1em;
   color: #004d00;
   font-family: Futura, Helvetica, Arial, sans-serif;
 	color: #009999;
 	font-size: 1.5em;
 	font-weight: 900;
-	padding: 0.7em;
+	padding: 0.7em 0.4em;
+}
+#log_button{
+  margin-right: 1.3em;
 }
 .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
 	color: #990000;
@@ -92,7 +95,11 @@ html, body {
 	margin-top: 0.5em;
 	border-color: #ccc;
 } 
-
+#search_form{
+  margin-right: 0em;
+  width: 30%
+  
+}
 
 /*---END Navbar Design---*/
 
@@ -102,7 +109,7 @@ h1 {
 	padding-top: 1em;
 	margin-top: 1em;
 	margin-bottom: 20px;
-	color: #990000;
+	color: #890000;
 	font-size: 2em;
 	font-weight: 900;
 }
@@ -126,10 +133,10 @@ p{
 	font-family: Futura, Helvetica, Arial, sans-serif;
 	font-size: 1.5em;
 	font-weight: 500;
-	margin-left: 30px;
+	/*margin-left: 30px;*/
 }
 a:visited{
-	color: #333;
+	color: #890000;
 }
 
 /*---Styling Images---*/
@@ -185,7 +192,7 @@ a:visited{
 
 /*---Index Page---*/
 .carousel{
-	margin: 5em auto;
+	margin: 4em auto;
 }
 .carousel-inner>.item>a>img{
 	height: 70%;
@@ -237,3 +244,8 @@ ol.carousel-indicators li.active {
   background-color: #fffff0;
   text-allign: center;
 } 
+/*--for new session page-login--*/
+#new_session{
+  margin-top: 1em;
+  padding-top: 1em;
+}

@@ -1,34 +1,42 @@
 <p id="notice"><%= notice %></p>
-<div class="show">
-	<p>
-  	<h1><%= @product.name %></h1>
-	</p>
-</div> <!--closing .show here so the pic below doesn't get squeezed in the mobile mode-->
-	<% num = @product.id %>
-	<%= link_to image_tag(@product.image_url, class: "img-responsive item_pic_2"), "../products/#{num}" %>
-<div class="show"><!--Show class continues here so the content except for the pic forms a nice column-->
-	<p class="full_description">
-  	<strong>Description:</strong>
-  	<%= @product.description %>
-	</p>
+
+	<br>
+  <br>
+  <h1><%= @product.name %></h1>
+  <br> 
+  <div class="col-xs-12 col-sm-8 col-md-7 col-lg-7">
+	 <% num = @product.id %>
+	 <%= link_to image_tag(@product.image_url, class: "img-responsive item_pic_2"), "../products/#{num}" %>
+  </div><!--bootstrap grid-->
+  <div class="col-xs-12 col-sm-4 col-md-5 col-lg-5"> 
+    <div class="show">
+	    <p class="full_description">
+  	    <strong>Description:</strong>
+  	    <%= @product.description %>
+        <br><br>
+        <strong>Colour:</strong>
+        <%= @product.colour %>
+        <br><br>
+        <strong>Price:</strong>
+        €<%= @product.price %>
+	    </p>
 
 <!--	<p>
   	<strong>Image url:</strong>
   	<#%= @product.image_url %>
 	</p>-->
-	<p>
-  	<strong>Colour:</strong>
-  	<%= @product.colour %>
-	</p>
 
-	<hr class="style-two">
-	<strong> &nbsp;&nbsp;€<%= @product.price %></strong>
- 	<a href="../orders"><button type="button" class="btn btn-success buy">Buy</button></a>
+      <hr class="style-null">
+      <div class="product_show_footer">  
+ 	      <a href="../orders"><button type="button" class="btn btn-success buy_2">Buy</button></a>
+      </div>
+      <br><br><br>
+  </div><!--/show-->
+    
+</div><!--/Bootstrap grid-->  
 
-
-	<div class="auxiliary_link">
-		<%= link_to 'Edit', edit_product_path(@product) %> |
-		<%= link_to 'Back', products_path %> |
-		<%= link_to 'Destroy', @product, method: :delete, data: { confirm: 'Are you sure?' } %>
-	</div>
-</div><!--/show-->
+<div class="auxiliary_link">
+	<%= link_to 'Edit', edit_product_path(@product) %> |
+	<%= link_to 'Back', products_path %> |
+	<%= link_to 'Destroy', @product, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
