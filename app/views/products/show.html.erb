@@ -19,6 +19,9 @@
         <br><br>
         <strong>Price:</strong>
         €<%= @product.price %>
+        <br><br>
+        <strong>Average Rating:</strong> 
+        <div class="rated" data-score="<%= @product.average_rating %>"></div>
 	    </p>
 
 <!--	<p>
@@ -34,6 +37,18 @@
   </div><!--/show-->
     
 </div><!--/Bootstrap grid-->  
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <br>
+</div>
+  <div class="col-xs-12 col-sm-10 col-md-6 col-lg-6">  
+    <div class="container" id="new_comm">
+        <%= render partial: 'new_comment' %>
+    </div>
+      <div id="old_comm">
+        <%= render partial:'comments' %>
+      </div>
+      <br><br>
+  </div>
 
 <div class="auxiliary_link">
 	<%= link_to 'Edit', edit_product_path(@product) %> |

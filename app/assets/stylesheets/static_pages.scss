@@ -244,8 +244,11 @@ ol.carousel-indicators li.active {
   background-color: #fffff0;
   text-allign: center;
 } 
-/*--for new session page-login--*/
-#new_session{
+/*--for -login & sign up & edit user--*/
+#new_session, #new_user, #edit_user{
   margin-top: 1em;
   padding-top: 1em;
+}
+.rated{
+  margin-bottom: 0.5em;
 }
