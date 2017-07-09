@@ -1,5 +1,5 @@
 
-<p id="notice"><%= notice %></p>
+<!--<p id="notice"><%= notice %></p>-->
 
 <h1>Products</h1>
 
@@ -34,6 +34,9 @@
     -->
       <%= render partial: "product", locals: {product: product} %>
     <% end %>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <%= will_paginate @products, class: 'flickr_pagination' %>
+    </div>
   </tbody>
 <!--</table> -->
 

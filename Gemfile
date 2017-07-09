@@ -39,6 +39,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 # authorization
 gem 'cancancan', '~> 1.10'
+#pagination
+gem 'will_paginate', '~> 3.1.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

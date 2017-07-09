@@ -1,5 +1,10 @@
 class Product < ApplicationRecord
-	has_many :orders
+  validates :name, presence: true 
+  validates :price, numericality: { only_integer: true, message: "The price value must be an integer" }
+	validates :image_url, format: /jpg/ 
+    
+
+  has_many :orders
   has_many :comments
 	if Rails.env.development?
 		def self.search(search_term)

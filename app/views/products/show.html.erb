@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<!--<p id="notice"><%= notice %></p>-->
 
 	<br>
   <br>
@@ -47,7 +47,8 @@
       <div id="old_comm">
         <%= render partial:'comments' %>
       </div>
-      <br><br>
+        <%= will_paginate @comments, class: 'flickr_pagination' %>
+      <br><br><br>
   </div>
 
 <div class="auxiliary_link">
