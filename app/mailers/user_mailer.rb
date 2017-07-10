@@ -12,5 +12,10 @@ class UserMailer < ApplicationMailer
  #         body: "Contact Telephone: #{phone}"
     )
   end
-  
+    def signup_email(user)
+  @user = user
+    mail(to: @user.email,
+          subject: "Welcome to Bike Berlin!"
+    )
+  end
 end
