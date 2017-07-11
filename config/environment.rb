@@ -12,5 +12,6 @@ ActionMailer::Base.smtp_settings = {
   :password       => ENV['MAILGUN_SMTP_PASSWORD'],
   :domain         => 'consumer-app-staging.herokuapp.com',
   :authentication => :plain,
+  enable_starttls_auto: true
 }
 ActionMailer::Base.delivery_method = :smtp
