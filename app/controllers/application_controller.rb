@@ -5,6 +5,10 @@ class ApplicationController < ActionController::Base
 
   logger.debug "inside ApplicationController..."
 
+  #def after_sign_in_path_for(resource)
+  #  request.env['omniauth.origin'] || stored_location_for(resource) || products_path
+  #end
+
   protected
 
     def configure_permitted_parameters

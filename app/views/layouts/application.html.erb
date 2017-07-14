@@ -50,7 +50,7 @@
                 <li> <%= link_to "About", static_pages_about_path %></li>
                 <li> <%= link_to "Products", products_path %></li>
                 <li> <%= link_to "Basket", orders_path %></li>
-                <li> <%= link_to "Users", users_path %></li>
+                <li> <%= link_to "Users", users_path if current_user.try(:admin?) %></li>
                 <li> <%= link_to "Contact", static_pages_contact_path %></li>
                 <!-- Search Box -->
                 <li id="search_form">  <%= form_with(url: products_url, method: 'get', local: true) do |form| %>

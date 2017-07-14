@@ -236,14 +236,16 @@ ol.carousel-indicators li.active {
 /*---END Contact Form---*/
 
 /*---Flash notice tags---*/
-.notice, .alert {
-  margin-top: 85px;
-  background: #ffe;
+.notice, .alert, #notice, .alert-info{
+  position: absolute;
+  margin-top: 2.6em;
+  background-color: #e5f4f4;
   border: 0.5px solid #99d6d6; 
   border-radius: 15px;
-  background-color: #fffff0;
-  text-allign: center;
+  text-align: center;
+  color: black;
 } 
+
 /*--for -login & sign up & edit user--*/
 #new_session, #new_user, #edit_user{
   margin-top: 1em;

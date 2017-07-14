@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
     if params[:q]
       search_term = params[:q]  
       # return our filtered list here
-      @products = Product.search(search_term)    
+      @products = Product.search(search_term).paginate(page: params[:page], per_page: 6)    
     else
       @products = Product.all.paginate(page: params[:page], per_page: 6)
 
