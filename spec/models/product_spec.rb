@@ -17,8 +17,10 @@ describe Product do
 
 
   context "when the product has comments" do
-    let(:product) {Product.create!(name: "race bike", price: 500, image_url: "123.jpg")}
-    let(:user) {User.create!(first_name: "Shean", last_name: "Blue", email: "Shean@blue.com", password: "rfcrfc")}
+    user = FactoryGirl.create(:user)
+    product = FactoryGirl.create(:product)
+#    let(:product) {Product.create!(name: "race bike", price: 500, image_url: "123.jpg")}
+#    let(:user) {User.create!(first_name: "Shean", last_name: "Blue", email: "Shean@blue.com", password: "rfcrfc")}
     
     it "returns the comment with a highest rating" do
       comment1 = product.comments.create!(rating: 1, user: user, body: "Awful bike!")

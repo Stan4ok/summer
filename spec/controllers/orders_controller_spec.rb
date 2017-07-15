@@ -2,8 +2,10 @@ require 'rails_helper'
 
 describe OrdersController, type: :controller do
   before do
-    @user1 = User.create!(first_name: "Dieter", last_name: "Bolen", email: "dieter@yahoo.com", password: "323456")
-    @product = Product.create!(name: "Blue Sky Bike", price: 300, image_url: "image.jpg")
+    @product = FactoryGirl.create(:product)
+    @user1 = FactoryGirl.create(:user)
+#    @user1 = User.create!(first_name: "Dieter", last_name: "Bolen", email: "dieter@yahoo.com", password: "323456")
+#    @product = Product.create!(name: "Blue Sky Bike", price: 300, image_url: "image.jpg")
     @order = Order.create!(user_id: @user1.id, product_id: @product.id)
   end
   

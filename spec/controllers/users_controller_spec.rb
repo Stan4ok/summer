@@ -4,7 +4,7 @@ describe UsersController, type: :controller do
   
   before do
     @user1 = User.create!(first_name: "Dieter", last_name: "Bolen", email: "dieter@yahoo.com", password: "323456")
-    @user2 = User.create!(first_name: "Peter", last_name: "Woods", email: "peter@yahoo.com", password: "223456")
+    @user2 = FactoryGirl.create(:user)
   end
 
   describe 'GET #show' do
@@ -15,7 +15,7 @@ describe UsersController, type: :controller do
         sign_in @user1
       end
 
-      it 'sings in the user and loads the root path' do
+      it 'signs in the user and loads the root path' do
         get :show, params: {id: @user1.id}
         expect(response).to have_http_status(302)
         expect(response).to redirect_to(root_path)

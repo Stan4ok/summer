@@ -4,7 +4,8 @@ describe Comment do
 
   context "there is no rating" do
     it "is not valid" do
-      expect(Comment.new(rating: nil)).not_to be_valid
+      comment = FactoryGirl.build(:comment, rating: nil)
+      expect(comment).not_to be_valid
     end
   end
 
