@@ -15,9 +15,10 @@ describe UsersController, type: :controller do
         sign_in @user1
       end
 
-      it 'loads correct user details' do
+      it 'sings in the user and loads the root path' do
         get :show, params: {id: @user1.id}
-#        expect(response).to have_http_status(200) shows status 302 istead
+        expect(response).to have_http_status(302)
+        expect(response).to redirect_to(root_path)
         expect(assigns(:user)).to eq @user1
       end
       
