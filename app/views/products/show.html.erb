@@ -31,7 +31,10 @@
 
       <hr class="style-null">
       <div class="product_show_footer">  
- 	      <a href="../orders"><button type="button" class="btn btn-success buy_2">Buy</button></a>
+ 	      <!--<a href="../orders"><button type="button" class="btn btn-success buy_2">Buy</button></a>-->
+        <%= form_with(url: '/payments/create') do |form| %>
+        <%= render partial: "shared/stripe_checkout_button" %>
+        <% end %>
       </div>
       <br><br><br>
   </div><!--/show-->
