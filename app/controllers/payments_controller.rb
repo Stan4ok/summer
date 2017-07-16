@@ -1,4 +1,5 @@
 class PaymentsController < ApplicationController
+  before_action :authenticate_user!
   def create
     @product = Product.find(params[:product_id])
     if user_signed_in?
@@ -23,7 +24,8 @@ class PaymentsController < ApplicationController
           user_id: @user_id,
           product_id: params[:product_id],
           total: @product.price * 100)
-        flash[:notice] = "Congratulation on your purchase!"
+        flash[:notice] = "Congratulation on your purchase! You will receive an email confirmation."
+        UserMailer.purchase_confirmation(@user, @product).deliver_now
       end
       # The card has been declined
       rescue Stripe::CardError => e

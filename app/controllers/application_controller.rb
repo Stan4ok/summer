@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :store_current_location, :unless => :devise_controller?
 
   logger.debug "inside ApplicationController..."
 
@@ -22,4 +23,8 @@ class ApplicationController < ActionController::Base
   redirect_to main_app.root_url, alert: exception.message
   end
 
+  private
+    def store_current_location
+      store_location_for(:user, request.url)
+    end
 end

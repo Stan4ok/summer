@@ -32,8 +32,12 @@
       <hr class="style-null">
       <div class="product_show_footer">  
  	      <!--<a href="../orders"><button type="button" class="btn btn-success buy_2">Buy</button></a>-->
-        <%= form_with(url: '/payments/create') do |form| %>
-        <%= render partial: "shared/stripe_checkout_button" %>
+        <% if user_signed_in? %>
+          <%= form_with(url: '/payments/create') do |form| %>
+          <%= render partial: "shared/stripe_checkout_button" %>
+        <% end %>
+        <% else %>
+          <%= link_to "<button class=\"btn btn-success buy_2\" type=\"button\"><span>Log In to Buy</span></button>".html_safe, new_user_session_path, message: "no" %>
         <% end %>
       </div>
       <br><br><br>
@@ -45,7 +49,11 @@
 </div>
   <div class="col-xs-12 col-sm-10 col-md-6 col-lg-6">  
     <div class="container" id="new_comm">
+      <% if user_signed_in? %>
         <%= render partial: 'new_comment' %>
+      <% else %>
+        <%= link_to "<button class=\"btn btn-success buy_2\" type=\"button\"><span>Log In to Review</span></button>".html_safe, new_user_session_path, message: "no" %>
+      <% end %>
     </div>
       <div id="old_comm">
         <%= render partial:'comments' %>
@@ -53,6 +61,7 @@
         <%= will_paginate @comments, class: 'flickr_pagination' %>
       <br><br><br>
   </div>
+
 
 <div class="auxiliary_link">
 	<%= link_to 'Edit', edit_product_path(@product) if current_user.try(:admin?) %> 
