@@ -89,3 +89,27 @@ div {
 label {
   display: block;
 }
+/*--For Validations--*/
+div#error_explanation{
+  width: 100%;
+}
+#error_explanation{
+  margine-top: 3em;
+  width: 60%;
+  border-radius: 4px;
+  display: inline-block;
+}
+#error_explanation h2{
+  font-family: Futura, Helvetica, Arial, sans-serif;
+  font-size: 1.2em;
+  background-color: transparent;
+  color: black;
+}
+#error_explanation ul li{
+  font-size: 1.2em;
+}
+.field_with_errors{
+  background-color: #b2e0e0;
+  display: flex;
+  border: red;
+}

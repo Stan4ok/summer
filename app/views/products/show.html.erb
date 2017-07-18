@@ -5,8 +5,9 @@
   <h1><%= @product.name %></h1>
   <br> 
   <div class="col-xs-12 col-sm-8 col-md-7 col-lg-7">
-	 <% num = @product.id %>
-	 <%= link_to image_tag(@product.image_url, class: "img-responsive item_pic_2"), "../products/#{num}" %>
+	<%# if Rails.application.assets.find_asset(@product.image_url).nil? %>
+    <% num = @product.id %>
+    <%= link_to image_tag(@product.image_url, class: "img-responsive item_pic_2"), "../products/#{num}" %>
   </div><!--bootstrap grid-->
   <div class="col-xs-12 col-sm-4 col-md-5 col-lg-5"> 
     <div class="show">

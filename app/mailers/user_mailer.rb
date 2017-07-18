@@ -25,4 +25,7 @@ class UserMailer < ApplicationMailer
           subject: "Your purchase in Bike Berlin"
     )
   end
+
+
 end
+
