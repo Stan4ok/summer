@@ -22,7 +22,7 @@
           <td style="padding: 15px 0  20px 0; color: #000000; font-family: Futura, Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1;"><%= user.last_name %></td>
           <td style="padding: 15px 0  20px 0; color: #000000; font-family: Futura, Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1;"><%= user.email %></td>
           <td bgcolor="#eaeaac"><%= link_to ('<span class="glyphicon glyphicon-user"></span>').html_safe, user, class:"btn btn-default btn-sm", role:"button" %></td>
-          <td bgcolor="#ace9ea"><%= link_to ('<span class="glyphicon glyphicon-edit"></span>').html_safe, edit_user_path(user), class:"btn btn-default btn-sm", role:"button" %></td>
+          <td bgcolor="#babadc"><%= link_to ('<span class="glyphicon glyphicon-edit"></span>').html_safe, edit_user_path(user), class:"btn btn-default btn-sm", role:"button" %></td>
           <td bgcolor="#eaacac"><%= link_to ('<span class="glyphicon glyphicon-remove"></span>').html_safe, user, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-default btn-sm", role:"button" %></td>
         </tr>
       <% end %>
