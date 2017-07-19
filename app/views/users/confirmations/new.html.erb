@@ -5,8 +5,8 @@
     <%= devise_error_messages! %>
 
     <div class="field">
-    <!--  <%#= f.label :email %><br />-->
-      <%= f.email_field :email, :class=>"form-control", autofocus: true, :style=>"width:100%", :placeholder=>"Your Email here", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+     <!-- <%#= f.label :email %><br /> -->
+      <%= f.email_field :email, :class=>"form-control", :style=>"width:100%", :placeholder=>"Your Email here", autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
     </div>
 
     <div class="actions">
@@ -14,5 +14,5 @@
     </div>
   <% end %>
 
-  <%= render "devise/shared/links" %>
-</end>
+  <%= render "users/shared/links" %>
+</div>

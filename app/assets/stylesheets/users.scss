@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 /*Signup, Login Forms*/
-#signup, #login, #users_form, #user_profile{
+#signup, #login, #users_form, #user_profile, #pwd{
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -26,3 +26,7 @@
   font-size: 1em;
   font-weight: 500;
 }
+#pwd>h2{
+  padding-top: 1em;
+}
+

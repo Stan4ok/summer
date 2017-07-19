@@ -1,13 +1,20 @@
 <table table border="0" cellpadding="0" cellspacing="0" width="100%">
   <tbody>
+    
+    <td align="center" bgcolor="#eaeaac">
+        <%= image_tag("http://savepic.ru/14917265.png", class:"img-responsive", width:"240", alt:"Berlin Bike Shop", border:"0") %>
+    </td>
     <tr>
-      <td bgcolor="#fffff0" align="center" style="color: #5b0000; font-family: Arial, sans-serif; font-size: 24px;"><p>Dear <%= @user.first_name %>, welcome to Bike Berlin! </p></td>
+      <td bgcolor="#fdfdfa" style="padding: 0 0 20px 0; color: #5b0000; font-family: Arial, sans-serif; font-size: 20px; line-height: 2;" align="center"> <p> <br> Important: You will receive a separate email with a link to activate your account first.  <br></p></td>
     </tr>
     <tr>
-      <td bgcolor="#fffff0" style="padding: 0 0 20px 0; color: #5b0000; font-family: Arial, sans-serif; font-size: 20px; line-height: 2;" align="center"> <p>To login to the shop, just follow this link: <%= link_to "log in", "https://consumer-app-staging.herokuapp.com/users/sign_in" %>. <br> Today we have got a special offer for you which you can access <%= link_to "here", "https://consumer-app-staging.herokuapp.com/static_pages/landing_page" %>! <br>Thank you for joining us and have a great day! <br> Your <%= link_to "Bike Berlin", "https://consumer-app-staging.herokuapp.com/" %></p></td>
+      <td bgcolor="#fdfdfa" align="center" style="color: #c73232; font-family: Arial, sans-serif; font-size: 24px;"><p>Dear <%= @user.first_name %>, welcome to Bike Berlin! </p></td>
     </tr>
     <tr>
-      <td align="center" bgcolor="#66c1c1">
+      <td bgcolor="#fdfdfa" style="padding: 0 0 20px 0; color: #5b0000; font-family: Arial, sans-serif; font-size: 20px; line-height: 2;" align="center"> <p>To login to the shop, just follow this link: <%= link_to "log in", "https://consumer-app-staging.herokuapp.com/users/sign_in" %>. <br> Today we have got a special offer for you which you can access <%= link_to "here", "https://consumer-app-staging.herokuapp.com/static_pages/landing_page" %>! <br>Thank you for joining us and have a great day! <br> Your <%= link_to "Bike Berlin", "https://consumer-app-staging.herokuapp.com/" %></p></td>
+    </tr>
+    <tr>
+      <td align="center" bgcolor="#93e2e2">
         <%= image_tag("http://savepic.ru/14712123.jpg", class:"img-responsive", width:"360", alt:"Berlin Bike Shop", border:"0") %>
       </td>
     </tr>

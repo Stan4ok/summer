@@ -11,9 +11,9 @@
 	
 }
 .product_item{
-	border: 0.5px solid #99d6d6;
+	border: 0.5px solid #124849;
   border-radius: 15px;
-	background-color: #fffff0; 
+	background-color: #fdfdfa; 
 	padding: 1.5em;
 	margin: 1em;
 	height: 36em;
@@ -54,6 +54,9 @@ p{
   overflow-y: hidden;
   max-height: 48.5%;
   line-height: 1.2em;
+  color: #0a292a;
+  font-size: 1.4em;
+  font-weight: 600;
 }
 .card_footer{
   padding-right: 18%;
@@ -163,16 +166,20 @@ style-null {
   background-color: #990000;
 }
 .btn-info{
-  background-color: #009999;
-  border-color: #009999;
+  background-color: #1a6768;
+  border-color: #eaeaac;
 }
 .btn-info:hover{
-  background-color: #449d44;
-  border-color: #398439;
+  background-color: #c7c732;
+  border-color: #c7c732;
   }
 .btn-success{
-  background-color: #009999;
-  border-color: #009999; 
+  background-color: #3232c7;
+  border-color: #eaeaac; 
+}
+.btn-success:hover{
+  background-color: #c7c732;
+  border-color: #c7c732;
 }
 
 /*--Pagination of comments--*/
