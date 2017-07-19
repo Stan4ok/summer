@@ -1,5 +1,5 @@
 <div class="special_offer">
-	<h1>Special Offer!</h1>
+	<h1><br>Special Offer!</h1>
 	<h2><%= @featured_product.name %></h2>
 	<% num_featured = @featured_product.id %>
 	<%= link_to image_tag(@featured_product.image_url, class: "img-responsive item_pic"), "../products/#{num_featured}" %>

@@ -63,7 +63,7 @@ html, body {
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form{
 	border: 0.5px solid #124849; 
-	border-radius: 15px;
+	/*border-radius: 15px;*/
 	background-color: #e1e18a;
   background-color: #f1f1cb;
 }
@@ -219,6 +219,12 @@ a:visited{
 }
 a:hover{
 	background-color: transparent;
+}
+.carousel-control.right{
+  background-image: linear-gradient(to right,rgba(0,0,0,.0001) 0,rgba(83, 66, 179, 0.46) 100%);
+}
+.carousel-control.left{
+  background-image: linear-gradient(to right,rgba(83, 66, 179, 0.46) 0,rgba(0,0,0,.0001) 100%);
 }
 .carousel-caption{
 	color: #124849;;

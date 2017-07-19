@@ -26,6 +26,7 @@ class PaymentsController < ApplicationController
           total: @product.price * 100)
         flash[:notice] = "Congratulation on your purchase! You will receive an email confirmation."
         UserMailer.purchase_confirmation(@user, @product).deliver_now
+        redirect_to products_path
       end
       # The card has been declined
       rescue Stripe::CardError => e
