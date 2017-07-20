@@ -32,7 +32,10 @@
         
       </tr>
     -->
-      <%= render partial: "product", locals: {product: product} %>
+      <% cache(cache_key_for_products) do %>
+        <%= render partial: "product", locals: {product: product} %>
+      <% end %>
+
     <% end %>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
       <%= will_paginate @products, class: 'flickr_pagination' %>
