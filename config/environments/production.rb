@@ -89,9 +89,9 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-end
 
-config.cache_store = :dalli_store,
+  #for caching on heroku
+  config.cache_store = :dalli_store,
                     (ENV["MEMCACHIER_SERVERS"] || "").split(","),
                     {:username => ENV["MEMCACHIER_USERNAME"],
                      :password => ENV["MEMCACHIER_PASSWORD"],
@@ -100,3 +100,7 @@ config.cache_store = :dalli_store,
                      :socket_failure_delay => 0.2,
                      :down_retry_delay => 60
                     }
+
+end
+
+

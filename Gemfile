@@ -34,6 +34,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+# Dalli gem to get Memcachier on Heroku to work
 gem 'dalli'
 # authentication
 gem 'devise'
