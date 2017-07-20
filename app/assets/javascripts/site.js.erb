@@ -1,6 +1,4 @@
-//for Notice and Alert to fade away
-$(document).on('turbolinks:load', function() {
-  $(".alert").delay(5000).fadeOut(1250);
+var refreshRating = function(){
   $('.rating').raty({
     starHalf: '<%= asset_path 'star-half.png' %>',
     starOff: '<%= asset_path 'star-off.png' %>',
@@ -13,10 +11,22 @@ $(document).on('turbolinks:load', function() {
     starOn: '<%= asset_path 'star-on.png' %>',
     readOnly: true,
     score: function() {
-    return $(this).attr('data-score');
+      return $(this).attr('data-score');
     }
   });
-  $('.img-zoom').elevateZoom({ zoomType: "lens", lensShape: "round", lensSize: 310, containLensZoom: true});
+};
+
+$(document).on('turbolinks:load', function() { //adding ajaxSuccess like this: 'turbolinks:load ajaxSuccess' did not work, so created instead refreshRating(); in create.js.erb
+  
+  refreshRating();
+
+  $(".alert").delay(5000).fadeOut(1250); //for Notice and Alert to fade away
+  
+  if ($(window).width() > 1025){
+    $('.img-zoom').elevateZoom({ zoomType: "lens", lensShape: "round", lensSize: 310, containLensZoom: true, responsive: true});
+  } else {
+    $('.img-zoom').elevateZoom({ zoomType: "lens", lensShape: "round", lensSize: 200, containLensZoom: true, responsive: true});
+  }   
 });
 
 
