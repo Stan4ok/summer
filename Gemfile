@@ -44,6 +44,8 @@ gem 'cancancan', '~> 1.10'
 gem 'will_paginate', '~> 3.1.1'
 #stripe payment
 gem 'stripe'
+#redis: an advanced key-value store
+gem 'redis-rails' 
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

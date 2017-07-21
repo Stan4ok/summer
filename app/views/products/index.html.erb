@@ -17,8 +17,8 @@
   </thead>
 -->
   <tbody>
-    
-    <% @products.each do |product| %>
+    <!--<%# cache(cache_key_for_products) do %> Had to switch off as it doesn't work correctly with pagination - all pages in the product list become the same. Caching still left for individual products in _product.html.erb-->
+      <% @products.each do |product| %>
       <!--<tr>
         <td><#%= product.name %></td>
         <td><%= product.description %></td>
@@ -32,11 +32,12 @@
         
       </tr>
     -->
-      <% cache(cache_key_for_products) do %>
+      
         <%= render partial: "product", locals: {product: product} %>
-      <% end %>
+    
 
-    <% end %>
+      <% end %>
+  <%# end %>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
       <%= will_paginate @products, class: 'flickr_pagination' %>
     </div>
