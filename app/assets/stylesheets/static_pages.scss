@@ -269,6 +269,9 @@ ol.carousel-indicators li.active {
   color: black;
   z-index: 10;
 } 
+.comm_alert>.alert{
+  margin-top: -4em;
+}
 
 /*--for -login & sign up & edit user & pwd reset--*/
 #new_session, #new_user, #edit_user, #pwd{

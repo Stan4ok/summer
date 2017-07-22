@@ -1,4 +1,4 @@
-<!--<p id="notice"><%= notice %></p>-->
+<!--<p id="notice"><%#= notice %></p>-->
 
 	<br>
   <br>
@@ -47,6 +47,9 @@
     
 </div><!--/Bootstrap grid-->  
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <div class="comm_alert">
+    <div class="alert alert-info" style="display:none" role="alert">A new comment posted!</div>
+  </div>
   <br>
 </div>
   <div class="col-xs-12 col-sm-10 col-md-6 col-lg-6">  
@@ -57,11 +60,11 @@
         <%= link_to "<button class=\"btn btn-success buy_2\" type=\"button\"><span>Log In to Review</span></button>".html_safe, new_user_session_path, message: "no" %>
       <% end %>
     </div>
-      <div id="old_comm">
-        <%= render partial:'comments' %>
-      </div>
-        <%= will_paginate @comments, class: 'flickr_pagination' %>
-      <br><br><br>
+    <div id="old_comm">
+      <%= render partial:'comments' %>
+    </div>
+      <%= will_paginate @comments, class: 'flickr_pagination' %>
+    <br><br><br>
   </div>
 
 
