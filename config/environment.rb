@@ -14,3 +14,4 @@ ActionMailer::Base.smtp_settings = {
   domain: 'consumer-app-staging.herokuapp.com',
   enable_starttls_auto: true
 }
+
