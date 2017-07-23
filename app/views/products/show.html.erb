@@ -12,7 +12,7 @@
     <%= image_tag(@product.image_url, class: "img-responsive item_pic_2 img-zoom", data_zoom_image: "@product.image_url") %>
   </div><!--bootstrap grid-->
   <div class="col-xs-12 col-sm-4 col-md-5 col-lg-5"> 
-    <div class="show">
+    <div class="show" data-product-id="<%= @product.id %>">
 	    <p class="full_description">
   	    <strong>Description:</strong>
   	    <%= @product.description %>
